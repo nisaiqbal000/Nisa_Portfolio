@@ -1,5 +1,3 @@
-# Nisa_Portfolio
-Personal Portfolio Website — Showcasing projects, skills, and certifications.
 # 🌟 Nisa Iqbal — Personal Portfolio Website
 
 A modern, responsive, and animated portfolio website built with **HTML**, **Tailwind CSS**, and **JavaScript**, showcasing my **software engineering**, **AI**, and **cybersecurity** projects.
@@ -47,5 +45,3 @@ If you’d like to collaborate or discuss a project, feel free to reach out via 
 
 ---
 
-⭐ **Pro Tip:**  
-Every time you push an update to GitHub, Vercel automatically rebuilds and deploys your latest version — no manual redeployment needed.

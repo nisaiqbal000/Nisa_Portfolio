@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nisa Iqbal | Software Engineer & Digital Marketer</title>
+  <meta name="description" content="Portfolio of Nisa Iqbal — cybersecurity, AI/ML, and full-stack projects.">
+
+  <!-- Tailwind + AOS + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal:#14b8a6;
+      --bg:#0b1220;
+    }
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #06070a; color: #e7eef6; -webkit-font-smoothing:antialiased; }
+    .container{ max-width: 1100px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
+    /* header fix + center alignment */
+    header { backdrop-filter: blur(6px); background: rgba(7,10,14,0.6); border-bottom: 1px solid rgba(255,255,255,0.03); }
+    header .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.8rem 0; }
+    header .brand { font-family:'Poppins', sans-serif; color:var(--teal); font-weight:700; font-size:1.05rem; letter-spacing:0.2px;}
+    nav a { color: #cfe9e6; transition: color .18s ease; }
+    nav a:hover { color: var(--teal); }
+    /* Hero */
+    #hero { padding-top: calc(3.5rem + 2rem); padding-bottom: 4.5rem; text-align:center; position:relative; overflow:hidden; }
+    .hero-glow { position:absolute; inset:-15% -10% auto -10%; height: 60vh; background: radial-gradient(closest-side, rgba(20,184,166,0.12), transparent 40%); filter: blur(40px); transform: translateZ(0); pointer-events:none; z-index:0; }
+    .hero-card { position:relative; z-index:2; }
+    /* Floating icons */
+    .float-icon { position:absolute; opacity:.12; font-size:22px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5)); }
+    @keyframes floaty { 0% { transform: translateY(0) } 50% { transform: translateY(-14px) } 100% { transform: translateY(0) } }
+    .fi-1 { left:6%; top:10%; animation: floaty 6s ease-in-out infinite; }
+    .fi-2 { right:8%; top:6%; animation: floaty 7.2s ease-in-out infinite; }
+    .fi-3 { left:18%; top:36%; animation: floaty 5.6s ease-in-out infinite; }
+    .fi-4 { right:20%; top:36%; animation: floaty 6.8s ease-in-out infinite; }
+    .fi-5 { left:50%; top:4%; transform:translateX(-50%); animation: floaty 8s ease-in-out infinite; opacity: .08; font-size:28px; }
+
+    /* cards, chips */
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:1.1rem; border-radius:0.9rem; }
+    .chip { padding:.35rem .6rem; border-radius:.6rem; border:1px solid rgba(255,255,255,0.04); font-size:.82rem; color:#cfe9e6; }
+    /* projects grid fallback */
+    #projects-grid { display:grid; gap:1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+    /* mobile menu */
+    #mobileMenu{ display:none; }
+    @media (max-width: 768px){
+      nav.desktop { display:none; }
+      #mobileMenu{ display:block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="w-full fixed top-0 left-0 z-50">
+    <div class="container nav-inner">
+      <div class="brand">Nisa Iqbal</div>
+
+      <nav class="desktop">
+        <a href="#hero" class="mx-3">Home</a>
+        <a href="#about" class="mx-3">About</a>
+        <a href="#projects" class="mx-3">Projects</a>
+        <a href="#skills" class="mx-3">Skills</a>
+        <a href="#certifications" class="mx-3">Certifications</a>
+        <a href="#contact" class="mx-3">Contact</a>
+        <!-- encoded CV filename -->
+        <a href="assets/Nisa_%20Resume%20(1).pdf" download class="ml-4 inline-block px-3 py-2 rounded-md bg-teal-400 text-black font-semibold">Download CV</a>
+      </nav>
+
+      <!-- mobile -->
+      <div id="mobileMenu" class="flex items-center gap-3">
+        <button id="menuToggle" aria-label="Open menu" class="text-teal-300">☰</button>
+      </div>
+    </div>
+
+    <!-- mobile drawer -->
+    <div id="menuDrawer" class="w-full bg-gray-900/95 border-t border-gray-800 hidden">
+      <div class="container px-4 py-4 flex flex-col">
+        <a href="#hero" class="py-2">Home</a>
+        <a href="#about" class="py-2">About</a>
+        <a href="#projects" class="py-2">Projects</a>
+        <a href="#skills" class="py-2">Skills</a>
+        <a href="#certifications" class="py-2">Certifications</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="assets/Nisa_%20Resume%20(1).pdf" download class="py-2 mt-2 bg-teal-400 text-black rounded px-3 inline-block w-max">Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+
+    <!-- HERO -->
+    <section id="hero" class="relative">
+      <div class="hero-glow"></div>
+
+      <!-- floating icons (subtle) -->
+      <div class="float-icon fi-1">🐍</div>
+      <div class="float-icon fi-2">🛡️</div>
+      <div class="float-icon fi-3">🧠</div>
+      <div class="float-icon fi-4">🌐</div>
+      <div class="float-icon fi-5">⚙️</div>
+
+      <div class="container hero-card text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">Hi — I'm <span style="color:var(--teal)">Nisa Iqbal</span> 👋</h1>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-6">Software Engineer & Digital Marketer — focused on cybersecurity automation, AI/ML and web development. Building <strong>Cyber Razor</strong> as my FYP.</p>
+
+        <div class="flex items-center justify-center gap-3">
+          <a href="#projects" class="px-4 py-2 rounded-md bg-teal-400 text-black font-semibold">View Projects</a>
+          <a href="assets/Nisa_%20Resume%20(1).pdf" download class="px-4 py-2 rounded-md border border-teal-400">Download CV</a>
+        </div>
+
+        <div class="mt-8 mx-auto max-w-lg">
+          <div class="card text-left font-mono">
+<pre class="text-sm text-gray-300 m-0">
+def cyber_razor():
+    # Detect and respond to threats with Python & automation
+    tools = ["Wazuh", "SOAR", "Python", "ML"]
+    for t in tools:
+        print(f"Securing systems with {t}")
+</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16" data-aos="fade-right">
+      <div class="container text-center max-w-3xl">
+        <h2 class="text-3xl font-bold" style="color:var(--teal)">About Me</h2>
+        <p class="mt-4 text-gray-300 leading-relaxed">
+          Studying Software Engineering at Jinnah University for Women (2022–2025). I combine secure web development, automation, and practical ML to deliver production-ready solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-12 bg-gray-900/40" data-aos="fade-up">
+      <div class="container">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold" style="color:var(--teal)">Projects</h2>
+          <div class="text-sm text-gray-300">Auto-loaded from GitHub • <a href="https://github.com/nisaiqbal000" target="_blank" class="text-teal-300">github.com/nisaiqbal000</a></div>
+        </div>
+
+        <div id="projects-grid" aria-live="polite">
+          <!-- JS will populate -->
+          <!-- fallback: static examples shown while fetch executes -->
+          <div class="card">
+            <h3 class="text-lg font-semibold" style="color:var(--teal)">Cyber Razor</h3>
+            <p class="text-gray-300 text-sm">FYP: automation & detection (Python, Wazuh).</p>
+            <div class="mt-3 flex gap-2 flex-wrap"><span class="chip">Python</span><span class="chip">Security</span></div>
+          </div>
+          <div class="card">
+            <h3 class="text-lg font-semibold" style="color:var(--teal)">BecomeCyberSafe</h3>
+            <p class="text-gray-300 text-sm">Awareness site — HTML/CSS/PHP.</p>
+            <div class="mt-3 flex gap-2 flex-wrap"><span class="chip">HTML</span><span class="chip">PHP</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-12" data-aos="fade-left">
+      <div class="container text-center">
+        <h2 class="text-2xl font-bold" style="color:var(--teal)">Skills</h2>
+        <div class="mt-4 flex flex-wrap gap-3 justify-center">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Python</span>
+          <span class="chip">Wazuh / SIEM</span>
+          <span class="chip">AWS Foundations</span>
+          <span class="chip">BI & SQL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-12 bg-gray-900/40" data-aos="fade-up">
+      <div class="container text-center max-w-3xl">
+        <h2 class="text-2xl font-bold" style="color:var(--teal)">Certifications</h2>
+        <p class="mt-4 text-gray-300">All certifications are visible on my LinkedIn profile. Click below to view them.</p>
+        <div class="mt-4">
+          <a href="https://www.linkedin.com/in/nisa-iqbal/details/certifications/" target="_blank" class="px-4 py-2 rounded-md bg-teal-400 text-black font-semibold">View all certifications on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16" data-aos="fade-up">
+      <div class="container max-w-md text-center">
+        <h2 class="text-2xl font-bold" style="color:var(--teal)">Contact</h2>
+        <p class="mt-3 text-gray-300">Want to collaborate? Send a message below.</p>
+
+        <form id="contactForm" class="mt-6 space-y-3" action="/api/send-email" method="POST">
+          <input name="name" required placeholder="Your name" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700" />
+          <input name="_replyto" type="email" required placeholder="Your email" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700" />
+          <textarea name="message" rows="5" required placeholder="Message..." class="w-full p-3 rounded-md bg-gray-800 border border-gray-700"></textarea>
+          <button type="submit" class="w-full px-4 py-2 rounded-md bg-teal-400 text-black font-semibold">Send Message</button>
+          <p id="formStatus" class="text-sm text-gray-400 mt-1"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-6 bg-gray-950 border-t border-gray-800">
+      <div class="container text-center text-gray-400">
+        <div>© 2025 Nisa Iqbal</div>
+        <div class="mt-2">
+          <a href="https://github.com/nisaiqbal000" target="_blank" class="mx-2 hover:text-teal-300">GitHub</a>
+          <a href="https://www.linkedin.com/in/nisa-iqbal/" target="_blank" class="mx-2 hover:text-teal-300">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- AOS + main.js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic', offset: 120 });
+  </script>
+</body>
+</html>

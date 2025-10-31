@@ -5,7 +5,7 @@ A modern, responsive, and animated portfolio website built with **HTML**, **Tail
 ---
 
 ## 🔗 Live Demo
-➡️ [View Portfolio on Vercel](https://nisa-portfolio.vercel.app)
+➡️ [View Portfolio on Vercel](https://nisa-portfolio-kappa.vercel.app/))
 
 ---
 
@@ -20,7 +20,7 @@ A modern, responsive, and animated portfolio website built with **HTML**, **Tail
 
 ---
 
-## 🧠 Tech Stack
+## '''''🧠 Tech Stack
 - **Frontend:** HTML5, Tailwind CSS, JavaScript (ES6)
 - **Animations:** AOS (Animate On Scroll)
 - **Hosting:** [Vercel](https://vercel.com)
@@ -45,3 +45,4 @@ If you’d like to collaborate or discuss a project, feel free to reach out via 
 
 ---
 
+[[=
